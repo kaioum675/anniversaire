@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Birthday Surprise ❤️</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="petals" id="petals"></div>
+
+    <main class="container" id="welcome">
+        <div class="heart">❤️</div>
+
+        <p class="small-text">A SPECIAL DAY FOR SOMEONE SPECIAL</p>
+
+        <h1>I have something<br>for you...</h1>
+
+        <p class="description">
+            A little surprise, made with love.
+        </p>
+
+        <button id="openButton">
+            Open your surprise <span>❤️</span>
+        </button>
+
+        <p class="footer">Made with love, just for you.</p>
+    </main>
+
+    <main class="container hidden" id="surprise">
+        <div class="heart">❤️</div>
+
+        <p class="small-text">TODAY IS YOUR DAY</p>
+
+        <h1>Happy Birthday!</h1>
+
+        <p class="description">
+            I hope your day is as beautiful as your smile.
+        </p>
+
+        <div class="cake-scene">
+
+    <div class="cake-glow"></div>
+
+    <div class="cake-plate"></div>
+
+    <div class="cake-body">
+        <div class="cake-cream-line"></div>
+
+        <div class="chocolate-drips">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <div class="cake-plaque">
+            Happy Birthday
+            <span>♡</span>
+        </div>
+    </div>
+
+    <div class="cake-top">
+        <div class="chocolate-top"></div>
+
+        <div class="rose rose-one">🌹</div>
+        <div class="rose rose-two">🌹</div>
+        <div class="rose rose-three">🌹</div>
+        <div class="rose rose-four">🌹</div>
+        <div class="rose rose-five">🌹</div>
+
+        <div class="gold-bead bead-one"></div>
+        <div class="gold-bead bead-two"></div>
+        <div class="gold-bead bead-three"></div>
+        <div class="gold-bead bead-four"></div>
+    </div>
+
+    <div class="candles">
+        <div class="candle candle-one">
+            <div class="flame"></div>
+        </div>
+
+        <div class="candle candle-two">
+            <div class="flame"></div>
+        </div>
+
+        <div class="candle candle-three">
+            <div class="flame"></div>
+        </div>
+    </div>
+
+</div>
+
+<p class="description" id="wishText">
+    Close your eyes and make a wish...
+</p>
+
+<button id="wishButton">
+    Blow out the candles ✨
+</button>
+
+<audio id="backgroundMusic" loop>
+    <source src="audio/romantic.mp3" type="audio/mpeg">
+</audio>
+
+<button id="letterButton" class="hidden">
+    Read my letter ❤️
+</button>
+
+<section id="loveLetter" class="hidden letter-section">
+
+    <p class="small-text">A SECRET MESSAGE FOR YOU</p>
+
+    <h1 class="letter-heading">Something from my heart...</h1>
+
+    <p class="envelope-hint">
+        There is something waiting inside ❤️
+    </p>
+
+    <button id="envelopeButton" class="envelope-button">
+        <div class="envelope">
+            <div class="envelope-back"></div>
+            <div class="envelope-flap"></div>
+            <div class="envelope-front"></div>
+            <div class="wax-seal">♥</div>
+        </div>
+        <span>Open your letter</span>
+    </button>
+
+    <div id="letterPaper" class="letter-paper hidden">
+        <div class="paper-decoration">❤️</div>
+
+        <p class="paper-title">My dearest...</p>
+
+        <p id="typedMessage" class="letter-text"></p>
+
+        <p class="signature">With all my love, ❤️</p>
+
+        <button id="finalButton" class="hidden">
+            A final suprise awaits ❤️
+        </button>
+    </div>
+
+</section>
+
+        <p class="footer">There is more waiting for you...</p>
+    </main>
+
+    <!-- Final cinematic scene -->
+<section id="finalScene" class="final-scene hidden">
+
+    <video id="fireworksVideo" autoplay muted playsinline loop preload="auto">
+        <source src="video/fireworks.mp4" type="video/mp4">
+    </video>
+
+    <div class="final-overlay">
+        <div class="final-message">
+            <h1>I love you, babe ❤️</h1>
+
+            <p class="final-line second-line">
+                You make my world more beautiful.
+            </p>
+
+            <p class="final-line third-line">
+                A little surprise, just for you...
+            </p>
+        </div>
+    </div>
+
+</section>
+    <script src="script.js"></script>
+</body>
+</html>

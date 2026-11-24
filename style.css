@@ -1,0 +1,857 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Poppins:wght@300;400&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background: radial-gradient(circle at center, #29121f, #100b12 65%, #08070a);
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 25px;
+    position: relative;
+    z-index: 2;
+    animation: appear 1.5s ease;
+}
+
+.heart {
+    color: #ed8cac;
+    font-size: 55px;
+    margin-bottom: 20px;
+    animation: heartbeat 2s infinite;
+}
+
+.small-text {
+    color: #d98ba7;
+    font-size: 10px;
+    letter-spacing: 4px;
+    margin-bottom: 25px;
+}
+
+h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(48px, 9vw, 76px);
+    font-weight: 500;
+    line-height: 1.1;
+    color: #ffe3ed;
+    text-shadow: 0 0 25px #e879a455;
+}
+
+.description {
+    color: #d4b8c5;
+    font-size: 14px;
+    margin-top: 25px;
+    line-height: 1.8;
+}
+
+button {
+    margin-top: 35px;
+    padding: 15px 30px;
+    border: 1px solid #e58bab;
+    border-radius: 40px;
+    background: #e58bab;
+    color: #180d14;
+    font-family: inherit;
+    font-size: 13px;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+button:hover {
+    background: transparent;
+    color: #ffe3ed;
+    box-shadow: 0 0 25px #e58bab66;
+    transform: translateY(-4px);
+}
+
+button span {
+    margin-left: 8px;
+}
+
+.footer {
+    position: absolute;
+    bottom: 25px;
+    color: #806575;
+    font-size: 10px;
+    letter-spacing: 1px;
+}
+
+.hidden {
+    display: none;
+}
+
+.cake {
+    font-size: 85px;
+    margin-top: 25px;
+    animation: float 3s ease-in-out infinite;
+}
+
+/* Falling petals */
+
+.petal {
+    position: fixed;
+    top: -30px;
+    color: #e58bab;
+    opacity: 0.6;
+    pointer-events: none;
+    animation: fall linear forwards;
+    z-index: 1;
+}
+
+@keyframes fall {
+    to {
+        transform: translateY(110vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+@keyframes heartbeat {
+    50% {
+        transform: scale(1.2);
+    }
+}
+
+@keyframes float {
+    50% {
+        transform: translateY(-12px);
+    }
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* Celebration */
+
+.confetti {
+    position: fixed;
+    top: -20px;
+    z-index: 10;
+    pointer-events: none;
+    animation: confettiFall 3s linear forwards;
+}
+
+@keyframes confettiFall {
+    to {
+        transform: translateY(110vh) rotate(720deg);
+        opacity: 0;
+    }
+}
+/* Music and letter buttons */
+
+#musicButton,
+#letterButton {
+    margin-top: 18px;
+}
+
+.letter-section {
+    width: 100%;
+    max-width: 600px;
+    margin: 45px auto;
+    padding: 30px 20px;
+    border: 1px solid #d98ba733;
+    border-radius: 20px;
+    background: #ffffff08;
+    animation: appear 1.5s ease;
+}
+
+.letter-heart {
+    font-size: 45px;
+    color: #ed8cac;
+    margin-bottom: 20px;
+    animation: heartbeat 2s infinite;
+}
+
+.letter-section h1 {
+    font-size: clamp(38px, 7vw, 55px);
+}
+
+.letter-text {
+    color: #f0d7e2;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px;
+    line-height: 1.9;
+    margin-top: 25px;
+    white-space: pre-line;
+    min-height: 100px;
+}
+
+.signature {
+    color: #e58bab;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 24px;
+    margin-top: 30px;
+}
+
+.letter-section.hidden {
+    display: none;
+}
+/* ===== CINEMATIC ROMANCE ===== */
+
+body {
+    background:
+        radial-gradient(ellipse at 50% 45%, #351322 0%, transparent 55%),
+        radial-gradient(ellipse at 10% 90%, #26101f 0%, transparent 45%),
+        #08070b;
+}
+
+/* Soft cinematic glow */
+
+.container {
+    animation: cinematicAppear 1.5s ease both;
+}
+
+@keyframes cinematicAppear {
+    from {
+        opacity: 0;
+        transform: translateY(25px) scale(0.98);
+        filter: blur(5px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+        filter: blur(0);
+    }
+}
+
+.letter-section {
+    width: min(100%, 650px);
+    margin: 45px auto;
+    padding: 35px 20px;
+    border: 1px solid #d98ba72a;
+    border-radius: 25px;
+    background: linear-gradient(
+        145deg,
+        #ffffff0b,
+        #5b19301c
+    );
+    box-shadow: 0 0 60px #d84d8020;
+}
+
+.letter-heading {
+    font-size: clamp(35px, 7vw, 55px);
+}
+
+.envelope-hint {
+    color: #c49aaa;
+    font-size: 13px;
+    margin-top: 15px;
+}
+
+/* Envelope */
+
+.envelope-button {
+    background: transparent;
+    border: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 22px;
+    margin: 30px auto;
+    color: #f3b7ce;
+    font-family: inherit;
+}
+
+.envelope {
+    position: relative;
+    width: 190px;
+    height: 125px;
+    filter: drop-shadow(0 10px 25px #e879a455);
+    transition: transform 0.5s ease;
+}
+
+.envelope-button:hover .envelope {
+    transform: translateY(-8px) scale(1.04);
+}
+
+.envelope-back {
+    position: absolute;
+    inset: 0;
+    background: #8e3159;
+    border-radius: 8px;
+}
+
+.envelope-front {
+    position: absolute;
+    inset: 0;
+    background: #c45b82;
+    clip-path: polygon(0 0, 50% 60%, 100% 0, 100% 100%, 0 100%);
+    border-radius: 8px;
+}
+
+.envelope-flap {
+    position: absolute;
+    inset: 0;
+    background: #ed9ab6;
+    clip-path: polygon(0 0, 100% 0, 50% 55%);
+    transform-origin: top;
+    transition: transform 0.8s ease;
+    z-index: 2;
+}
+
+.wax-seal {
+    position: absolute;
+    z-index: 3;
+    left: 50%;
+    top: 52%;
+    transform: translate(-50%, -50%);
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    background: #64162f;
+    color: #ffc4d9;
+    box-shadow: 0 0 15px #ff8eae66;
+}
+
+/* Open animation */
+
+.envelope.opened .envelope-flap {
+    transform: rotateX(180deg);
+}
+
+.envelope.opened {
+    transform: translateY(-20px);
+}
+
+/* Letter paper */
+
+.letter-paper {
+    max-width: 520px;
+    margin: 35px auto 10px;
+    padding: 35px 25px;
+    background: linear-gradient(145deg, #f9e8ed, #ead1dc);
+    border-radius: 5px;
+    color: #3c192b;
+    box-shadow: 0 15px 60px #0009;
+    animation: paperAppear 1.2s ease both;
+}
+
+@keyframes paperAppear {
+    from {
+        opacity: 0;
+        transform: translateY(35px) scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.paper-decoration {
+    color: #a53f69;
+    font-size: 35px;
+}
+
+.paper-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 32px;
+    color: #873653;
+    margin: 15px 0;
+}
+
+.letter-paper .letter-text {
+    color: #47283a;
+    text-align: left;
+    font-size: 19px;
+    line-height: 1.9;
+}
+
+.letter-paper .signature {
+    color: #a53f69;
+    text-align: right;
+}
+
+/* Mobile adjustments */
+
+@media (max-width: 480px) {
+    .letter-section {
+        padding: 30px 12px;
+    }
+
+    .letter-paper {
+        padding: 25px 18px;
+    }
+
+    .letter-paper .letter-text {
+        font-size: 17px;
+    }
+}
+.envelope-button.hidden {
+    display: none;
+}
+/* ===== LUXURY BIRTHDAY CAKE ===== */
+
+.cake-scene {
+    position: relative;
+    width: min(420px, 92vw);
+    height: 300px;
+    margin: 35px auto 15px;
+    perspective: 900px;
+    isolation: isolate;
+}
+
+/* Warm light behind the cake */
+.cake-glow {
+    position: absolute;
+    width: 85%;
+    height: 75%;
+    left: 7.5%;
+    top: 5%;
+    background: radial-gradient(
+        ellipse,
+        rgba(255, 130, 75, 0.24),
+        transparent 70%
+    );
+    filter: blur(20px);
+    z-index: -1;
+}
+
+/* Golden serving plate */
+.cake-plate {
+    position: absolute;
+    bottom: 10px;
+    left: 2%;
+    width: 96%;
+    height: 27px;
+    border-radius: 50%;
+    background: linear-gradient(
+        180deg,
+        #fff0bd,
+        #bd8737 35%,
+        #f6d58a 65%,
+        #765021
+    );
+    box-shadow:
+        0 8px 18px rgba(0,0,0,0.55),
+        0 0 15px rgba(235, 179, 91, 0.25);
+    z-index: 1;
+}
+
+/* Cream cake body */
+.cake-body {
+    position: absolute;
+    bottom: 27px;
+    left: 8%;
+    width: 84%;
+    height: 125px;
+    border-radius: 13px 13px 35px 35px;
+    background: linear-gradient(
+        90deg,
+        #bca18d,
+        #fff1dc 17%,
+        #f7e4d0 50%,
+        #fff5e6 82%,
+        #b99b84
+    );
+    box-shadow:
+        inset 0 -12px 15px rgba(107, 57, 36, 0.16),
+        0 12px 18px rgba(0,0,0,0.35);
+    z-index: 2;
+}
+
+/* Cream detail around the cake */
+.cake-cream-line {
+    position: absolute;
+    top: 22px;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: rgba(255,255,255,0.65);
+    box-shadow: 0 2px 5px rgba(116, 69, 46, 0.12);
+}
+
+/* Chocolate drips */
+.chocolate-drips span {
+    position: absolute;
+    top: -2px;
+    width: 17px;
+    height: 38px;
+    background: linear-gradient(90deg, #38150f, #8a3c20, #3c160e);
+    border-radius: 0 0 12px 12px;
+}
+
+.chocolate-drips span:nth-child(1) {
+    left: 8%;
+    height: 34px;
+}
+
+.chocolate-drips span:nth-child(2) {
+    left: 23%;
+    height: 48px;
+}
+
+.chocolate-drips span:nth-child(3) {
+    left: 39%;
+    height: 30px;
+}
+
+.chocolate-drips span:nth-child(4) {
+    left: 56%;
+    height: 43px;
+}
+
+.chocolate-drips span:nth-child(5) {
+    left: 73%;
+    height: 35px;
+}
+
+.chocolate-drips span:nth-child(6) {
+    left: 88%;
+    height: 46px;
+}
+
+/* Chocolate birthday plaque */
+.cake-plaque {
+    position: absolute;
+    bottom: 17px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 155px;
+    padding: 9px 5px;
+    border: 2px solid #d7ad65;
+    border-radius: 45% 45% 42% 42%;
+    background: linear-gradient(145deg, #4b1b13, #210b09);
+    color: #ffe1a1;
+    font-family: Georgia, serif;
+    font-size: 15px;
+    font-style: italic;
+    text-align: center;
+    text-shadow: 0 0 8px rgba(255, 208, 125, 0.55);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.25);
+}
+
+.cake-plaque span {
+    display: block;
+    font-size: 18px;
+    color: #ffd17c;
+}
+
+/* Cake top */
+.cake-top {
+    position: absolute;
+    bottom: 130px;
+    left: 8%;
+    width: 84%;
+    height: 65px;
+    border-radius: 50%;
+    background: linear-gradient(
+        180deg,
+        #fff5e8,
+        #e9d2b9
+    );
+    box-shadow: 0 5px 10px rgba(0,0,0,0.22);
+    z-index: 3;
+}
+
+/* Glossy chocolate layer */
+.chocolate-top {
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    background: radial-gradient(
+        ellipse at 35% 25%,
+        #a65a35,
+        #542014 65%,
+        #2b100c
+    );
+    border: 2px solid #d69b58;
+    box-shadow: inset 0 4px 8px rgba(255,255,255,0.13);
+}
+
+/* Roses */
+.rose {
+    position: absolute;
+    z-index: 5;
+    font-size: 31px;
+    filter: drop-shadow(0 3px 3px rgba(0,0,0,0.4));
+    animation: roseSway 3s ease-in-out infinite alternate;
+}
+
+.rose-one {
+    left: 10%;
+    top: 1px;
+}
+
+.rose-two {
+    left: 29%;
+    top: -9px;
+    font-size: 37px;
+    animation-delay: .4s;
+}
+
+.rose-three {
+    left: 48%;
+    top: 0;
+    font-size: 40px;
+    animation-delay: .8s;
+}
+
+.rose-four {
+    right: 22%;
+    top: -8px;
+    font-size: 35px;
+    animation-delay: .3s;
+}
+
+.rose-five {
+    right: 5%;
+    top: 3px;
+    animation-delay: .6s;
+}
+
+@keyframes roseSway {
+    from { transform: rotate(-3deg); }
+    to { transform: rotate(3deg); }
+}
+
+/* Golden decorative pearls */
+.gold-bead {
+    position: absolute;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: radial-gradient(circle at 30% 25%, #fff1b4, #d39a37 65%, #80521d);
+    box-shadow: 0 1px 4px rgba(255, 205, 111, 0.5);
+    z-index: 6;
+}
+
+.bead-one { left: 18%; top: 42px; }
+.bead-two { left: 40%; top: 49px; }
+.bead-three { right: 38%; top: 43px; }
+.bead-four { right: 15%; top: 38px; }
+
+/* Three elegant candles */
+.candles {
+    position: absolute;
+    bottom: 180px;
+    left: 0;
+    width: 100%;
+    height: 90px;
+    z-index: 7;
+}
+
+.candle {
+    position: absolute;
+    bottom: 0;
+    width: 12px;
+    height: 76px;
+    border-radius: 4px 4px 2px 2px;
+    background: repeating-linear-gradient(
+        135deg,
+        #fff4e7 0px,
+        #fff4e7 7px,
+        #d75b70 7px,
+        #d75b70 12px
+    );
+    box-shadow:
+        inset -3px 0 4px rgba(80, 20, 20, 0.18),
+        0 0 5px rgba(255,255,255,0.18);
+}
+
+.candle-one {
+    left: 35%;
+    height: 65px;
+}
+
+.candle-two {
+    left: 49%;
+    height: 82px;
+}
+
+.candle-three {
+    left: 63%;
+    height: 68px;
+}
+
+/* Animated candle flame */
+.flame {
+    position: absolute;
+    width: 14px;
+    height: 23px;
+    left: 50%;
+    top: -23px;
+    transform: translateX(-50%);
+    border-radius: 50% 50% 45% 45%;
+    background: radial-gradient(
+        ellipse at 50% 70%,
+        #fffbd2 0%,
+        #ffdc69 35%,
+        #ff8737 70%,
+        transparent 100%
+    );
+    box-shadow:
+        0 0 9px #ffb34d,
+        0 0 19px rgba(255, 137, 55, 0.8);
+    transform-origin: 50% 100%;
+    animation: flicker 0.8s ease-in-out infinite alternate;
+}
+
+@keyframes flicker {
+    from {
+        transform: translateX(-50%) rotate(-5deg) scale(0.95);
+    }
+    to {
+        transform: translateX(-50%) rotate(5deg) scale(1.08);
+    }
+}
+
+/* Extinguish the flame and show smoke */
+.flame.off {
+    animation: none;
+    background: transparent;
+    opacity: 1;
+    box-shadow: none;
+}
+
+.flame.off::after {
+    content: "";
+    position: absolute;
+    width: 9px;
+    height: 24px;
+    left: 3px;
+    top: -5px;
+    border-radius: 50%;
+    background: linear-gradient(
+        to top,
+        rgba(190,190,190,0.5),
+        transparent
+    );
+    filter: blur(4px);
+    animation: smokeRise 1.5s ease-out forwards;
+}
+
+@keyframes smokeRise {
+    from {
+        opacity: 0.7;
+        transform: translateY(0) scale(0.7);
+    }
+    to {
+        opacity: 0;
+        transform: translateY(-35px) scale(2);
+    }
+}
+
+/* Small screens */
+@media (max-width: 480px) {
+    .cake-scene {
+        transform: scale(0.92);
+        transform-origin: top center;
+        margin-bottom: -8px;
+    }
+}
+/* FINAL CINEMATIC SCENE */
+
+.final-scene {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    background: #000;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 2s ease;
+}
+
+.final-scene.hidden {
+    display: none;
+}
+
+.final-scene.visible {
+    opacity: 1;
+}
+
+.final-scene video {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.final-overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 25px;
+    text-align: center;
+    background: radial-gradient(
+        ellipse at center,
+        rgba(0, 0, 0, 0.05),
+        rgba(0, 0, 0, 0.45)
+    );
+}
+
+.final-message {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    color: white;
+}
+
+.final-message h1 {
+    font-family: Georgia, serif;
+    font-size: clamp(38px, 7vw, 76px);
+    color: #ffe0e9;
+    text-shadow: 0 0 25px #ff477e, 0 0 55px #ff174f;
+    opacity: 0;
+    animation: finalAppear 2s ease forwards;
+    animation-delay: 2s;
+}
+
+.final-line {
+    font-family: Georgia, serif;
+    font-size: clamp(17px, 3vw, 27px);
+    line-height: 1.7;
+    color: #fff0f4;
+    text-shadow: 0 0 15px rgba(255, 100, 150, 0.8);
+    opacity: 0;
+}
+
+.second-line {
+    animation: finalAppear 2s ease forwards;
+    animation-delay: 4s;
+}
+
+.third-line {
+    color: #f8c978;
+    font-style: italic;
+    animation: finalAppear 2s ease forwards;
+    animation-delay: 6s;
+}
+
+@keyframes finalAppear {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
